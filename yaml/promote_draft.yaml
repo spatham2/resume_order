@@ -1,0 +1,4 @@
+# Relative paths resolve from the repo root; ~ is expanded.
+draft: current_resume/draft.tex
+current: current_resume/spatham_resume.tex
+previous_dir: previous_resume

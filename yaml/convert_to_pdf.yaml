@@ -1,0 +1,3 @@
+# Relative paths resolve from the repo root; ~ is expanded.
+tex: current_resume/spatham_resume.tex
+pdf: pdf/spatham_resume.pdf
