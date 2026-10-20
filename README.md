@@ -1,6 +1,6 @@
 # resume_order
 
-Versioned LaTeX resume workflow: edit a draft, promote it to current (archiving the old one), build a PDF.
+Versioned LaTeX resume workflow that stores previous versions of resumes, and converts latex to pdf formatting.
 
 ## Layout
 
