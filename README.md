@@ -13,15 +13,15 @@ yaml/             per-script path config (relative to repo root; ~ expanded)
 
 ## Scripts
 
-- `promote_draft.sh [draft.tex]`: moves the current resume to `previous_resume/` with today's date, then moves the draft into its place. Refuses to overwrite an existing archive for the same day. Paths from `yaml/promote_draft.yaml`.
-- `convert_to_pdf.sh [file.tex]`: compiles the current resume (or the given file) with `pdflatex` in a temp dir and writes the PDF to `pdf/`. On failure, keeps the build dir and prints the log path. Paths from `yaml/convert_to_pdf.yaml`.
+- `promote_draft.sh <resume-name>`: moves the named current resume to `previous_resume/<resume-name>_MM_DD_YYYY.tex`, then moves `current_resume/draft.tex` into its place. The `.tex` extension is optional. If the named resume does not exist, the draft becomes its first version. Refuses to overwrite an existing archive for the same day. Paths come from `yaml/promote_draft.yaml`.
+- `convert_to_pdf.sh [resume-name or file.tex]`: compiles the named resume from `current_resume/` (or an explicitly supplied file path) with `pdflatex` and overwrites `pdf/spatham_resume.pdf`. The `.tex` extension is optional for a resume name. With no argument, it uses the configured default. On failure, it keeps the build directory and prints the log path. Paths come from `yaml/convert_to_pdf.yaml`.
 
 ## Typical flow
 
 ```
 # edit current_resume/draft.tex
-./promote_draft.sh
-./convert_to_pdf.sh
+./promote_draft.sh spatham_resume_embedded
+./convert_to_pdf.sh spatham_resume_embedded
 ```
 
 ## Requirements

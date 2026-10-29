@@ -10,7 +10,20 @@ c = yaml.safe_load(open(sys.argv[1]))
 print(os.path.join(sys.argv[2], os.path.expanduser(c[sys.argv[3]])))' "$config" "$root" "$1"
 }
 
-tex="${1:-$(cfg tex)}"
+if [[ $# -gt 1 ]]; then
+  echo "Usage: $0 [resume-name or file.tex]" >&2
+  exit 1
+fi
+
+if [[ $# -eq 0 ]]; then
+  tex="$(cfg tex)"
+elif [[ "$1" == */* ]]; then
+  tex="$1"
+else
+  name="${1%.tex}"
+  [[ -n "$name" && "$name" != "." && "$name" != ".." ]] || { echo "Invalid resume name: $1" >&2; exit 1; }
+  tex="$(dirname "$(cfg tex)")/$name.tex"
+fi
 pdf="$(cfg pdf)"
 job="$(basename "$pdf" .pdf)"
 

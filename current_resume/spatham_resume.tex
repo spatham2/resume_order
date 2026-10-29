@@ -1,0 +1,209 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\begin{center}
+    \textbf{\Huge \scshape Sarvesh Patham} \\ \vspace{1pt}
+    \small 973-832-8957 $|$ \href{mailto:sarveshpatham@gmail.com}{\underline{sarveshpatham@gmail.com}} $|$ 
+    \href{http://www.linkedin.com/in/sarvesh-patham}
+{\underline{linkedin.com/in/sarvesh-patham}}
+\end{center}
+
+%----------CAREEER OBJECTIVE----------------
+\section{Career Objective}
+    {\small Improve industry experience in robotics, digital hardware design, and physical design through a \textbf{summer internship}\par}
+    
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Illinois Urbana Champaign}{Urbana, IL}
+      {Bachelor of Sciences in Electrical Engineering, Minor in Computer Science}{Expected: May 2028}
+        \resumeItemListStart
+        \resumeItem{Cumulative GPA: 3.9}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+    \resumeSubHeadingListStart
+     \resumeSubheading
+        {Astranis}{Fall 2026} {Hardware Test Engineering Intern}{San Francisco, CA}
+        \resumeItemListStart
+        \resumeItem{Built Python-based Hardware Test Framework (HTF) tests to validate onboard satellite propulsion systems}
+        \resumeItem{Wrote simulations of satellite hardware testbeds to verify test functionality enabling software-level validation}
+        \resumeItem{Updated gyroscope and accelerometer drivers for radiation testing, increasing sampling rates from 15 to 83 Hz}
+    \resumeItemListEnd
+     \resumeSubheading
+        {ARM}{Summer 2026} {Physical Implementation Intern}{Austin, TX}
+        \resumeItemListStart
+        \resumeItem{Developed netlist backtracing CLI/GUI tool for detecting integrated clock gates and verifying technology mapping}
+        \resumeItem{Created large RTL hierarchy processing flow to translate hierarchies into easily traversable directed acyclic graphs}
+        \resumeItem{Verified block-level physical designs and parsed bottlenecks utilizing Cadence Innovus and Synopsys Verdi}
+    \resumeItemListEnd
+     \resumeSubheading
+      {Electrical Engineer Intern}{June 2025 -- Present}
+      {General Autonomy AI}{Piscataway, NJ}
+      \resumeItemListStart
+        \resumeItem{Developed LiDAR/Camera/IMU data collection stack using NVIDIA Jetson Orin for simulator development}
+        \resumeItem{Implemented autonomy stack using ROS 2 capable of lanelet planning and object detection from sensor data}
+        \resumeItem{Secured \$50k in invesments through LiDAR and Camera mount optimization for investor demos.  }
+    \resumeItemListEnd
+    \resumeSubheading
+      {Undergraduate Research Assistant}{August 2025 -- May 2026}
+      {University of Illinois Urbana Champaign}{Urbana, IL}
+      \resumeItemListStart
+        \resumeItem{Constructed magnetic field verification system using Python, successfully field tested simulation field lines}
+        \resumeItem{Designed hall effect sensor mount and transceiver + pre-amp housing using Fusion360}
+        \resumeItem{Researching transceiver designs for decreasing signal-to-noise ratio and increasing data clarity for low field MRI}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+  \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Projects/Extracurriculars}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{SigRobotics} $|$ \emph{Electrical Engineer}}{February 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Determined stepper motor specifications, sensors, and gantry design for an industrial use autosampler}
+            \resumeItem{Controlling autonomous sampling system via PLC in C++ for remote access through Ignition}
+            \resumeItem{Designing pinch valves in Fusion360 for tubing based on industry specifications for analog controlled dispense}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Shazam Song Matcher} $|$ \emph{FPGA/Embedded Project}}{March 2026 -- May 2026}
+          \resumeItemListStart
+            \resumeItem{Developed a Shazam-style matcher that captured live audio and generated frequency hashes in SystemVerilog}
+            \resumeItem{Used MicroBlaze C in Vitis to read BRAM hashes, compare against a database, and output matches over UART}
+            \resumeItem{Built Python tools for UART audio streaming, song recording, and fingerprint database generation}
+          \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{Cuff-Link} $|$ \emph{Embedded Systems Project}}{December 2023 -- May 2024}
+          \resumeItemListStart
+            \resumeItem{Designed a muscle and motion tracking device using Fusion360 and developed in the Arduino IDE}
+            \resumeItem{Programmed python based virtual cursor controlled by onboard IMU and Electromyography sensor (EMG)}
+            \resumeItem{Selected as a top 3 class finalist for school competition; demonstrated product to audience of 400+}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Digital}{: Python, Robotics Operating System(ROS 2), MATLAB, Linux, C,C++, HTML  /CSS, CAD (Fusion360/OnShape), Arduino, ESP32} \\
+     \textbf{Hardware}{:PCB Design(KiCAD,Altium), LTspice/SPICE, SystemVerilog, Verilog, VHDL, Oscilloscopes, Function Generators, Soldering, Communcation Protocols (UART/I2C/CAN)} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
